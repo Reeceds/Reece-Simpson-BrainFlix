@@ -1,0 +1,15 @@
+@mixin mediaQ($size) {
+    @media screen and (min-width: $size) {
+        @content;
+    }
+}
+
+@mixin desktop--center {
+    width: 68rem;
+    margin: 0 auto;
+}
+
+@mixin max-desktop--center {
+    max-width: 68rem;
+    margin: 0 auto;
+}

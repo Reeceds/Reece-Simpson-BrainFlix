@@ -1,0 +1,17 @@
+@import 'variables';
+@import 'typography';
+@import 'mixins';
+
+// Reset
+* {
+	margin: 0;
+	padding: 0;
+    border: 0;
+    font-family: avenir-reg;
+    font-weight: 100;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    color: $primary-text;
+}
+
