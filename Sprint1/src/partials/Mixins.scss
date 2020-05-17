@@ -1,3 +1,6 @@
+@import './Typography.scss';
+
+
 @mixin mediaQ($size) {
     @media screen and (min-width: $size) {
         @content;
@@ -13,3 +16,87 @@
     max-width: 68rem;
     margin: 0 auto;
 }
+
+
+// ******************
+
+// Typography
+@mixin text {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+
+    @include mediaQ($tablet-width){
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+    }
+}
+
+@mixin header-1 {
+    font-size: 1.5rem;  
+    line-height: 2rem;
+    font-family: avenir-bold;
+
+    @include mediaQ($tablet-width){
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+    }
+}
+
+@mixin header-2 {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: avenir-demi-bold;
+
+    @include mediaQ($tablet-width){
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-family: avenir-bold;
+    }
+}
+
+@mixin header-3 {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: avenir-demi-bold;
+
+    @include mediaQ($tablet-width){
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}
+
+@mixin header-4 {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-family: avenir-demi-bold;
+
+    @include mediaQ($tablet-width){
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+    }
+}
+
+@mixin header-4-list {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    color: $labels-text;
+
+    @include mediaQ($tablet-width){
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
+}
+
+@mixin header-5 {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    color: $labels-text;
+    font-family: avenir-demi-bold;
+
+    @include mediaQ($tablet-width){
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+    }
+}
+
+// ******************

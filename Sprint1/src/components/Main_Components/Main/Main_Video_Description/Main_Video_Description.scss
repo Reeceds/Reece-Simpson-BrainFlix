@@ -1,0 +1,103 @@
+@import '../../../../partials/Variables.scss';
+@import '../../../../partials/Mixins.scss';
+@import '../../../../partials/Global.scss';
+
+
+.main-video {
+
+    &__description-container {
+        margin-bottom: 2rem;
+
+        @include mediaQ($tablet-width){
+            margin-bottom: 3.75rem;
+        }
+    }
+
+    &__title {
+        @include header-1;
+        margin-bottom: 1rem;
+    }
+
+    &__title__container {
+        @include mediaQ($desktop-width){
+            padding-top: 1.5rem;
+        }
+    }
+
+    &__userInfo-interactions__container {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid $divider;
+        margin-bottom: 1.25rem;
+
+        @include mediaQ($tablet-width){
+            flex-direction: row;
+            padding-bottom: 1.25rem;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__userInfo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        @include mediaQ($tablet-width){
+            margin-bottom: 0;
+        }
+    }
+
+    &__user {
+        @include header-2;
+        margin-right: 0.5rem;
+
+        @include mediaQ($tablet-width){
+            @include header-3;
+        }
+    }
+
+    &__date {
+        @include header-4-list;
+    }
+
+    &__interactions, &__views, &__likes {
+        display: flex;
+        @include text;
+    }
+
+    &__interactions {
+        margin-bottom: 1.25rem;
+
+        @include mediaQ($tablet-width){
+            margin-bottom: 0;
+        }
+    }
+
+    &__views {
+        margin-right: 1.5rem;
+    }
+
+    &__likes {
+        @include mediaQ($desktop-width){
+            margin-right: 2rem;
+        }
+    }
+
+    &__interactions-icon {
+        margin-right: 0.5rem;
+    }
+
+    &__descrption {
+        @include text;
+
+        @include mediaQ($tablet-width){
+            max-width: 32.5rem;
+        }
+    }
+
+
+}
+
+

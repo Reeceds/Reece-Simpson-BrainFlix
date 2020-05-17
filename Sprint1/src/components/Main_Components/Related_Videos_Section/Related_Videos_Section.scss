@@ -1,0 +1,45 @@
+@import '../../../partials/Global.scss';
+@import '../../../partials/Variables.scss';
+@import '../../../partials/Mixins.scss';
+
+.related-video {
+
+    &-section__container {
+        padding-top: 1.75rem;
+    }
+
+    &-section__header {
+        @include header-5;
+        margin-bottom: 1.5rem;
+    }
+
+    &__container {
+        display: flex;
+        margin-bottom: 1.5rem;
+    }
+
+    &-thumbnail__conatiner {
+        margin-right: 1rem;
+        height: 4.375rem;
+        max-width: 7.5rem;
+        min-width: 7.5rem;
+        overflow: hidden;
+    }
+
+    &-image {
+        width: 100%;
+    }
+
+    &-title-user__container {
+        max-width: 10.625rem;
+    }
+
+    &__title {
+        @include header-4;
+        margin-bottom: 0.25rem;
+    }
+
+    &__user {
+        @include text
+    }
+}

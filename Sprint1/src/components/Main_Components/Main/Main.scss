@@ -1,0 +1,25 @@
+@import '../../../partials/Global.scss';
+@import '../../../partials/Mixins.scss';
+@import '../../../partials/Variables.scss';
+
+.main-video {
+
+    &-info {
+        max-width: 44.5rem;
+
+        @include mediaQ($desktop-width){
+            border-right: 1px solid $divider;
+            min-width: 44.5rem;
+            margin-right: 1.5rem;
+        }
+    }
+
+    &-related-data__container {
+        display: flex;
+        flex-direction: column;
+    
+        @include mediaQ($desktop-width){
+            flex-direction: row;
+        }
+    }
+}
