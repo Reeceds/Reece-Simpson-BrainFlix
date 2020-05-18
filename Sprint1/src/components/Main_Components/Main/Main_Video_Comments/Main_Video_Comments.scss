@@ -16,24 +16,6 @@
         border-bottom: 1px solid $divider;
     }
 
-    &-user__image {
-        width: 3rem;
-        height: 3rem;
-        background-color: grey;
-        margin-right: 1.25rem;
-        border-radius: 100%;
-
-        &--margin {
-            margin-top: 1.5rem;
-        }
-    }
-
-    &-data {
-        @include mediaQ($tablet-width){
-            max-width: 39rem;
-        }
-    }
-
     &-form__title {
         @include header-5;
         margin-bottom: 0.25rem;
@@ -84,45 +66,6 @@
         @include mediaQ($tablet-width){
             max-width: 10rem;
         }
-    }
-
-    &-new {
-        display: flex;
-        padding: 1.5rem 0;
-        border-bottom: 1px solid $divider;
-    }
-
-    &-name-date {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 1rem;
-        align-items: center;
-    
-        @include mediaQ($tablet-width){
-            justify-content: start;
-        }
-    }
-
-    &-name {
-        @include header-4;
-    
-        @include mediaQ($tablet-width){
-            margin-right: 1rem;
-        }
-    }
-
-    &-date {
-        @include header-4-list;
-    }
-
-    &-text {
-        @include text;
-        word-wrap: break-word;
-    }
-
-    &-data {
-        display: flex;
-        flex-direction: column;
     }
 }
 

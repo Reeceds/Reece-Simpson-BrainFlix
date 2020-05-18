@@ -21,5 +21,4 @@ const RelatedVideoCard = props => {
 }
 
 
-
 export default RelatedVideoCard;

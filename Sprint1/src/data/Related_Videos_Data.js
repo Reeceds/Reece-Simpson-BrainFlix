@@ -1,13 +1,13 @@
 import { v4 as uuidv4} from 'uuid';
-import Image0 from '../../../assets/Images/video-list-0.jpg';
-import Image1 from '../../../assets/Images/video-list-1.jpg';
-import Image2 from '../../../assets/Images/video-list-2.jpg';
-import Image3 from '../../../assets/Images/video-list-3.jpg';
-import Image4 from '../../../assets/Images/video-list-4.jpg';
-import Image5 from '../../../assets/Images/video-list-5.jpg';
-import Image6 from '../../../assets/Images/video-list-6.jpg';
-import Image7 from '../../../assets/Images/video-list-7.jpg';
-import Image8 from '../../../assets/Images/video-list-8.jpg';
+import Image0 from '../assets/Images/video-list-0.jpg';
+import Image1 from '../assets/Images/video-list-1.jpg';
+import Image3 from '../assets/Images/video-list-3.jpg';
+import Image2 from '../assets/Images/video-list-2.jpg';
+import Image4 from '../assets/Images/video-list-4.jpg';
+import Image5 from '../assets/Images/video-list-5.jpg';
+import Image6 from '../assets/Images/video-list-6.jpg';
+import Image7 from '../assets/Images/video-list-7.jpg';
+import Image8 from '../assets/Images/video-list-8.jpg';
 
 const VideoList = [
     {

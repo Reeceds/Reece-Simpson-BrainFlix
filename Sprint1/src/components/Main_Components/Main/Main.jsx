@@ -2,17 +2,33 @@ import React, { Component } from 'react';
 import MainVideo from './Main_Video/Main_Video';
 import MainVideoDescription from './Main_Video_Description/Main_Video_Description';
 import MainVideoComments from './Main_Video_Comments/Main_Video_Comments';
-import RelatedVideosSection from '../Related_Videos_Section/Related_Videos_Section';
+import RelatedVideoCard from '../../Other_Components/Related_Video_Card/Related_Video_Card'
+import VideoList from '../../../data/Related_Videos_Data'
 
 import './Main_Video_Description/Main_Video_Description.scss'
-import VideoList from '../Related_Videos_Section/Related_Videos_Data';
 
+
+// const Main = () => {
+//     return (
+//         <>
+//             <MainVideo />
+//             <main className="site__container main-video-related-data__container">
+//                 <div className="main-video-info">
+//                     <MainVideoDescription />
+//                     <MainVideoComments />
+//                 </div>
+//                 <RelatedVideosSection />
+//             </main>
+//         </>
+//     )
+
+// }
 
 
 class Main extends Component {
     
     state = {
-        selectedVideo: VideoList[0]
+        displayedVideo: VideoList[0]
       }
 
       render() {
@@ -24,7 +40,16 @@ class Main extends Component {
                         <MainVideoDescription />
                         <MainVideoComments />
                     </div>
-                    <RelatedVideosSection state={this.state.selectedVideo} />
+                    <aside className="related-video-section__container">
+                        <h5 className="related-video-section__header">NEXT VIDEO</h5>
+                        {VideoList.map(relVid => {
+                            if(relVid !== this.state.displayedVideo) {
+                                return <RelatedVideoCard video={relVid} key={relVid.id}/>
+                            } else {
+                                return null
+                            }
+                        })}
+                    </aside>
                 </main>
             </>
         );

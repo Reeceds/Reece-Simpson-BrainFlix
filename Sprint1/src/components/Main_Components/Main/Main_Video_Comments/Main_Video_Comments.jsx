@@ -2,7 +2,7 @@ import React from 'react';
 import UserImage from '../../../../assets//Images/Mohan-muruge.jpg';
 import Btn from '../../../Other_Components/Button/Button';
 import CommentCard from '../../../Other_Components/Comment_Card/Comment_Card';
-import UserCommentsData from './User_Comments_Data';
+import UserCommentsData from '../../../../data/User_Comments_Data';
 
 
 

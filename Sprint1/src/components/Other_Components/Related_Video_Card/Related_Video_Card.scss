@@ -4,15 +4,6 @@
 
 .related-video {
 
-    &-section__container {
-        padding-top: 1.75rem;
-    }
-
-    &-section__header {
-        @include header-5;
-        margin-bottom: 1.5rem;
-    }
-
     &__container {
         display: flex;
         margin-bottom: 1.5rem;
