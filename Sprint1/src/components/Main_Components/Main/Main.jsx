@@ -8,22 +8,6 @@ import './Main_Video_Description/Main_Video_Description.scss'
 import VideoList from '../Related_Videos_Section/Related_Videos_Data';
 
 
-// const Main = () => {
-//     return (
-//         <>
-//             <MainVideo />
-//             <main className="site__container main-video-related-data__container">
-//                 <div className="main-video-info">
-//                     <MainVideoDescription />
-//                     <MainVideoComments />
-//                 </div>
-//                 <RelatedVideosSection />
-//             </main>
-//         </>
-//     )
-
-// }
-
 
 class Main extends Component {
     
@@ -40,7 +24,7 @@ class Main extends Component {
                         <MainVideoDescription />
                         <MainVideoComments />
                     </div>
-                    <RelatedVideosSection state={this.state.selectedVideo} VideoList={VideoList} />
+                    <RelatedVideosSection state={this.state.selectedVideo} />
                 </main>
             </>
         );
