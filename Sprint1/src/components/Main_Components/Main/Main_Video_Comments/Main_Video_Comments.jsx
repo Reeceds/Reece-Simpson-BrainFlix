@@ -1,7 +1,7 @@
 import React from 'react';
 import UserImage from '../../../../assets//Images/Mohan-muruge.jpg';
 import Btn from '../../../Other_Components/Button/Button';
-import UserComment from '../../../Other_Components/Comment/Comment';
+import CommentCard from '../../../Other_Components/Comment_Card/Comment_Card';
 import UserCommentsData from './User_Comments_Data';
 
 
@@ -25,8 +25,8 @@ const MainVideoComments = () => {
 
             {/* User Comment section */}
             {UserCommentsData.map(comment => {
-                return <UserComment comment={comment} key={comment.id}/>
-            })};
+                return <CommentCard comment={comment} key={comment.id}/>
+            })}
             
         </section>
     )

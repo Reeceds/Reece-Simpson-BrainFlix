@@ -1,11 +1,11 @@
 import React from 'react';
 
-const UserComment = (props) => {
+const CommentCard = props => {
     if (props.comment) {
         return (
             <div className="comment-new">
                 <div>
-                    <img className="comment-user__image" />
+                    <img className="comment-user__image" alt="" />
                 </div>
                 <div className="comment-data">
                     <div className="comment-name-date">
@@ -22,4 +22,4 @@ const UserComment = (props) => {
     
 }
 
-export default UserComment;
+export default CommentCard;

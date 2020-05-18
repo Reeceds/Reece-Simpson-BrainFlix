@@ -14,63 +14,63 @@ const VideoList = [
         id: uuidv4(), 
         title: 'BMX Rampage: 2018 Highlights', 
         channel: 'By Red Cow', 
-        image: {Image0} 
+        image: Image0 
     },
 
     {
         id: uuidv4(), 
-        title: 'Become A Travel Pro In 7O0npxe Easy Lesson', 
+        title: 'Become A Travel Pro In One Easy Lesson', 
         channel: 'Todd Welch', 
-        image: {Image1} 
+        image: Image1 
     },
 
     {
         id: uuidv4(), 
         title: 'Les Houches The Hidden Gem Of The Chamonix', 
         channel: 'Cornelia Blair', 
-        image: {Image2}  
+        image: Image2  
     },
 
     {
         id: uuidv4(), 
         title: 'Travel Health Useful Medical Information For', 
         channel: 'Glen Harper', 
-        image: {Image3}  
+        image: Image3  
     },
 
     {
         id: uuidv4(), 
         title: 'Cheap Airline Tickets Great Ways To Save', 
         channel: 'Emily Harper', 
-        image: {Image4}  
+        image: Image4  
     },
 
     {
         id: uuidv4(), 
         title: 'Take A Romantic Break In A Boutique Hotel', 
         channel: 'Ethan Owen', 
-        image: {Image5}  
+        image: Image5  
     },
 
     {
         id: uuidv4(), 
         title: 'Choose The Perfect Accommodations', 
         channel: 'Lydia Perez', 
-        image: {Image6}  
+        image: Image6  
     },
 
     {
         id: uuidv4(), 
         title: 'Cruising Destination Ideas', 
         channel: 'Timothy Austin', 
-        image: {Image7}  
+        image: Image7  
     },
 
     {
         id: uuidv4(), 
         title: 'Train Travel On Track For Safety', 
         channel: 'Scotty Cranmer', 
-        image: {Image8}  
+        image: Image8  
     },
 ];
 

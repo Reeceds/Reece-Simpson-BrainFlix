@@ -24,10 +24,12 @@
         max-width: 7.5rem;
         min-width: 7.5rem;
         overflow: hidden;
+        border-radius: 4px;
+
     }
 
     &-image {
-        width: 100%;
+        width: 110%;
     }
 
     &-title-user__container {
