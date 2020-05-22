@@ -5,6 +5,7 @@
 .main-video {
     width: 100%;
     max-width: 700px;
+    position: relative;
 
     @include mediaQ($tablet-width){
         height: 51.3vw;
@@ -26,11 +27,12 @@
             max-height: 531px;
         }
     }
+    &-controls__container {
+        position: absolute;
+    }
+
+    &-controls__bck-col{
+        background-color: rgba($color: $primary-bckgrnd, $alpha: 0.7);
+    }
 }
 
-.main-video-play-icon__container {
-    height: 10px;
-    width: 600px;
-    display: flex;
-    background-color: black;
-}
