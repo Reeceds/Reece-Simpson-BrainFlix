@@ -52,7 +52,6 @@
     }
 
     &-header__upload-btn-container {
-        width: 100%;
         flex-grow: 2;
         margin-right: 1rem;
         height: 3rem;
@@ -74,6 +73,9 @@
     height: 3rem;
     background-color: grey;
     border-radius: 100%;
+    background-image: url('../../../assets/Images/Mohan-muruge.jpg');
+    background-size: cover;
+    overflow: hidden;
 }
 
 

@@ -10,10 +10,6 @@
         @include mediaQ($tablet-width){
             margin-top: 1.5rem;
         }
-
-        @include mediaQ($desktop-width){
-            margin-top: 3rem;
-        }
     }
 
     &-header {
@@ -27,6 +23,8 @@
 
         @include mediaQ($desktop-width){
             border-bottom: unset;
+            margin-top: 3rem;
+
         }
     }
 

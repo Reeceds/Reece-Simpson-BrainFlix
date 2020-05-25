@@ -22,6 +22,18 @@
         }
     }
 
+    &-new-user__image {
+        width: 3rem;
+        height: 3rem;
+        background-color: grey;
+        margin-right: 1.25rem;
+        border-radius: 100%;
+        background-image: url('../../../assets/Images/Mohan-muruge.jpg');
+        background-size: cover;
+        overflow: hidden;
+        margin-top: 1.5rem;
+    }
+
     &-data {
         @include mediaQ($tablet-width){
             max-width: 39rem;

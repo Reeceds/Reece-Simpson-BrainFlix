@@ -1,7 +1,14 @@
 import React from 'react';
 
+
+
 const CommentCard = props => {
-    if (props.comment) {
+
+    if (props.mainVidComment) {
+
+        const newDate = new Date(props.mainVidComment.timestamp);
+        const dateConversion = (newDate.getMonth()+1) + '/' + newDate.getDate()+ '/' + newDate.getFullYear();
+
         return (
             <div className="comment-new">
                 <div>
@@ -9,10 +16,10 @@ const CommentCard = props => {
                 </div>
                 <div className="comment-data">
                     <div className="comment-name-date">
-                        <h4 className="comment-name">{props.comment.name}</h4>
-                        <h5 className="comment-date">{props.comment.date}</h5>
+                        <h4 className="comment-name">{props.mainVidComment.name}</h4>
+                        <h5 className="comment-date">{dateConversion}</h5>
                     </div>
-                    <p className="comment-text">{props.comment.comment}</p>
+                    <p className="comment-text">{props.mainVidComment.comment}</p>
                 </div>
             </div>
         )
