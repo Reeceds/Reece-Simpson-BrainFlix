@@ -9,6 +9,7 @@ import React from 'react';
 const API_Key = "?api_key=88ece3a1-841b-4363-80c8-efb38a300a3d";
 
 const MainVideo = props => {
+    console.log(props.mainVid.video);
     if(props.mainVid){
         return (
             <div className="main-video__container">

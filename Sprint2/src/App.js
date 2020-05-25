@@ -26,8 +26,9 @@ function App() {
         
         <Switch>
           <Route path="/" exact component={Main} />
+          <Route path="/Upload" component={VideoUploadPage}/>
           <Route path="/:videoId" component={Main} />
-          <Route path="/Upload" component={VideoUploadPage} />
+           />
         </Switch>
       </BrowserRouter>
     </div>

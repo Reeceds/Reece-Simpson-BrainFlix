@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
+
 import MainVideo from '../components/Main_Components/Main_Video/Main_Video';
 import MainVideoDescription from '../components/Main_Components/Main_Video_Description/Main_Video_Description';
 import RelatedVideoCard from '../components/Other_Components/Related_Video_Card/Related_Video_Card'
@@ -22,16 +24,35 @@ class Main extends Component {
         .then(response => {
             this.setState({
                 relatedVideos: response.data,
-                displayedVideo: response.data[0],
             });
 
-            axios.get(URL + this.state.displayedVideo.id + API_Key)
+            let DisplayID = "1af0jruup5gu";
+              if(this.props.match.params.videoId){
+                DisplayID = this.props.match.params.videoId;
+              }
+
+            axios.get(URL + DisplayID + API_Key)
             .then(response => {
                 this.setState({
                     displayedVideo: response.data,
                 })
             })
         })
+      }
+
+      componentDidUpdate(prevProps){
+          if(prevProps.match.params.videoId !== this.props.match.params.videoId){
+              let DisplayID = "1af0jruup5gu";
+              if(this.props.match.params.videoId){
+                DisplayID = this.props.match.params.videoId;
+              }
+              axios.get(URL + DisplayID + API_Key)
+              .then(response => {
+                  this.setState({
+                      displayedVideo: response.data,
+                  })
+              })
+          }
       }
 
       render() {
@@ -76,7 +97,7 @@ class Main extends Component {
                         {/* Related videos import */}
                         {this.state.relatedVideos.map(video => {
                             if(video.id !== this.state.displayedVideo.id){
-                                return <RelatedVideoCard key={video.id} video={video}/>
+                                return <Link key={video.id} to={"/" + video.id}><RelatedVideoCard  video={video}/></Link>
                             }
                         })}
                         
