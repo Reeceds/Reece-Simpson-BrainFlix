@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
-import SiteLogo from '../../../assets/Logo/Logo-brainflix.svg';
-import UploadIcon from '../../../assets/Icons/SVG/Icon-upload.svg';
-import Btn from '../../Other_Components/Button/Button'
+import SiteLogo from '../../assets/Logo/Logo-brainflix.svg';
+import UploadIcon from '../../assets/Icons/SVG/Icon-upload.svg';
+import Btn from '../other/Button/Button'
 
 
 const Header = () => {

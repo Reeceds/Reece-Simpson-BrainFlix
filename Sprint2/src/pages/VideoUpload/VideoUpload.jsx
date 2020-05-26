@@ -1,5 +1,5 @@
 import React from 'react';
-import UploadVideoForm from '../components/Main_Components/Video_Upload/Video_Upload'
+import UploadVideoForm from '../../components/videoUpload/VideoUploadForm/VideoUploadForm'
 
 const VideoUploadPage = () => {
     return (

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
-import MainVideo from '../components/Main_Components/Main_Video/Main_Video';
-import MainVideoDescription from '../components/Main_Components/Main_Video_Description/Main_Video_Description';
-import RelatedVideoCard from '../components/Other_Components/Related_Video_Card/Related_Video_Card'
-import Btn from '../components/Other_Components/Button/Button';
-import CommentCard from '../components/Other_Components/Comment_Card/Comment_Card';
+import MainVideo from '../../components/main/MainVideo/MainVideo';
+import MainVideoDescription from '../../components/main/MainVideoDescription/MainVideoDescription';
+import RelatedVideoCard from '../../components/main/RelatedVideoCard/RelatedVideoCard'
+import Btn from '../../components/other/Button/Button';
+import CommentCard from '../../components/main/CommentCard/CommentCard';
 import axios from 'axios';
  
 
@@ -26,12 +26,12 @@ class Main extends Component {
                 relatedVideos: response.data,
             });
 
-            let DisplayID = "1af0jruup5gu";
+            let displayID = "1af0jruup5gu";
               if(this.props.match.params.videoId){
-                DisplayID = this.props.match.params.videoId;
+                displayID = this.props.match.params.videoId;
               }
 
-            axios.get(URL + DisplayID + API_Key)
+            axios.get(URL + displayID + API_Key)
             .then(response => {
                 this.setState({
                     displayedVideo: response.data,
@@ -42,11 +42,11 @@ class Main extends Component {
 
       componentDidUpdate(prevProps){
           if(prevProps.match.params.videoId !== this.props.match.params.videoId){
-              let DisplayID = "1af0jruup5gu";
+              let displayID = "1af0jruup5gu";
               if(this.props.match.params.videoId){
-                DisplayID = this.props.match.params.videoId;
+                displayID = this.props.match.params.videoId;
               }
-              axios.get(URL + DisplayID + API_Key)
+              axios.get(URL + displayID + API_Key)
               .then(response => {
                   this.setState({
                       displayedVideo: response.data,
@@ -84,7 +84,6 @@ class Main extends Component {
                             </div>
 
                             {/* Main video comments import */}
-
                             {vidComments ? this.state.displayedVideo.comments.map(comment => {
                                 return <CommentCard key={comment.id} mainVidComment={comment}/>
                             }) : null}
@@ -97,7 +96,7 @@ class Main extends Component {
                         {/* Related videos import */}
                         {this.state.relatedVideos.map(video => {
                             if(video.id !== this.state.displayedVideo.id){
-                                return <Link key={video.id} to={"/" + video.id}><RelatedVideoCard  video={video}/></Link>
+                                return <Link key={video.id} to={"/" + video.id}><RelatedVideoCard video={video}/></Link>
                             }
                         })}
                         
@@ -109,62 +108,3 @@ class Main extends Component {
 }
 
 export default Main
-
-
-
-
-
-
-
-
-// class Main extends Component {
-    
-//     state = {
-//         displayedVideo: {},
-//         relatedVideos: []
-//       }
-
-//       render() {
-//         return (
-//             <>
-//                 {/* Main video import */}
-//                 <MainVideo />
-//                 <main className="site__container main-video-related-data__container">
-//                     <div className="main-video-info">
-
-//                         {/* Main video description import */}
-//                         <MainVideoDescription />
-//                         <section className="comment-section__container"> 
-//                             <h3 className="comment-count">3 Comments</h3>
-//                             <div className="comment__form-image__container">
-//                                 <div>
-//                                     <div className="comment-new-user__image"></div>
-//                                 </div>
-//                                 <div className="comment-form__container">
-//                                     <h5 className="comment-form__title">JOIN THE CONVERSATION</h5>
-//                                     <form className="comment-form">
-//                                         <textarea className="comment-input" placeholder="Add a new comment"/>
-//                                         <Btn text="COMMENT" class="primary-btn comment-form__btn"/>
-//                                     </form>
-//                                 </div>
-//                             </div>
-
-//                             {/* Main video comments import*/}
-//                             <CommentCard/>
-                            
-//                         </section>
-//                     </div>
-//                     <aside className="related-video-section__container">
-//                         <h5 className="related-video-section__header">NEXT VIDEO</h5>
-
-//                         {/* Related videos import */}
-//                         <RelatedVideoCard/>
-//                     </aside>
-//                 </main>
-//             </>
-//         );
-//       }
-// }
-
-
-// export default Main

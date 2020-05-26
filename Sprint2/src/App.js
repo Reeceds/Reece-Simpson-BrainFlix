@@ -1,26 +1,24 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import Header from './components/Main_Components/Header/Header';
-import Main from './pages/main';
-import VideoUploadPage from './pages/video_upload_page';
+import Header from './components/Header/Header';
+import Main from './pages/Main/Main';
+import VideoUploadPage from './pages/VideoUpload/VideoUpload';
 
-import './components/Main_Components/Header/Header.scss';
-import './components/Other_Components/Button/Button.scss';
-import './components/Main_Components/Main_Video/Main_Video.scss';
-import './pages/main.scss';
-import './components/Other_Components/Related_Video_Card/Related_Video_Card.scss';
-import './components/Other_Components/Comment_Card/Comment_Card.scss'
-import './components/Main_Components/Video_Upload/Video_Upload.scss';
-import './components/Main_Components/Main_Video_Description/Main_Video_Description.scss'
+import './components/Header/Header.scss';
+import './components/other/Button/Button.scss';
+import './components/main/MainVideo/MainVideo.scss';
+import './/pages/Main/Main.scss';
+import './components/main/RelatedVideoCard/RelatedVideoCard.scss';
+import './components/main/CommentCard/CommentCard.scss'
+import './components/videoUpload/VideoUploadForm/VideoUploadForm.scss';
+import './components/main/MainVideoDescription/MainVideoDescription.scss'
 
 
 
 function App() {
   return (
     <div className="App">
-      
-      
       <BrowserRouter>
       <Header />
         

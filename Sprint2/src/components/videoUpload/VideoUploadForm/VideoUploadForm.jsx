@@ -1,5 +1,5 @@
 import React from 'react';
-import Btn from '../../Other_Components/Button/Button';
+import Btn from '../../other/Button/Button';
 import UploadVidImage from '../../../assets/Images/Upload-video-preview.jpg'
 
 const VideoUploadForm = () => {
