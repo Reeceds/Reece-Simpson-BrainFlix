@@ -2,12 +2,14 @@ import React from 'react';
 import Btn from '../../other/Button/Button';
 import UploadVidImage from '../../../assets/Images/Upload-video-preview.jpg'
 import axios from 'axios';
+import { Link } from "react-router-dom";
+
 
 const URL = "http://localhost:8080/videolist/";
 
 const VideoUploadForm = () => {
 
-    function videoUpload (e) {
+    const videoUpload = (e) => {
         e.preventDefault();
         let title = e.target.title.value;
         let description = e.target.description.value;
@@ -15,9 +17,7 @@ const VideoUploadForm = () => {
         axios.post(URL, {"title": title, "description": description, "image": videoUploadImage}, {headers:{"content-type": "application/json"}})
         e.target.title.value = "";
         e.target.description.value = "";
-
     }
-    
 
     return (
         <section className="upload-video-section__container site__container"> 
@@ -37,13 +37,11 @@ const VideoUploadForm = () => {
                 </div>
                 <div className="upload-video-form-btn__container">
                     <Btn text="PUBLISH" class="primary-btn upload-video-form__btn"/>
-                    <Btn text="CANCEL" class="transparent-btn upload-video-form__btn"/>
+                    <Link to={"/"}><Btn text="CANCEL" class="transparent-btn upload-video-form__btn"/></Link>
                 </div>
              </form>
-
         </section>
     )
-    
 }
 
 export default VideoUploadForm
