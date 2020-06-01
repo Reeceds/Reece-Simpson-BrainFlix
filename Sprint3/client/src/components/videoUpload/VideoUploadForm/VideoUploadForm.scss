@@ -1,0 +1,134 @@
+@import '../../../partials/Global.scss';
+@import '../../../partials/Variables.scss';
+@import '../../../partials/Mixins.scss';
+
+
+.upload-video {
+
+    &-section__container {
+        
+        @include mediaQ($tablet-width){
+            margin-top: 1.5rem;
+        }
+    }
+
+    &-header {
+        @include header-1;
+        padding-bottom: 1.5rem;
+
+        @include mediaQ($tablet-width){
+            padding-bottom: 2rem;
+            border-bottom: 1px solid $divider;
+        }
+
+        @include mediaQ($desktop-width){
+            border-bottom: unset;
+            margin-top: 3rem;
+
+        }
+    }
+
+    &-form-image__container {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1.5rem;
+        width: 100%;
+
+        @include mediaQ($tablet-width){
+            padding-top: 2.5rem;
+        }
+
+        @include mediaQ($desktop-width){
+            flex-direction: row;
+            padding-bottom: 0;
+        }
+    }
+
+    &-thumbnail__container {
+        width: 100%;
+        border-radius: 4px;
+        max-width: 21.5rem;
+        margin-bottom: 1.75rem;
+
+        @include mediaQ($desktop-width){
+            margin-right: 1.5rem;
+            min-width: 21.5rem;
+        }
+    }
+
+    &__thumbnail {
+        width: 100%;
+        border-radius: 4px;
+    }
+
+    &-form__title {
+        @include header-5;
+        margin-bottom: 0.25rem;
+    }
+
+    &-form {
+        @include mediaQ($tablet-width){
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &-form__container {
+        width: 100%;
+    }
+
+    &-form-btn__container {
+        text-align: center;
+        
+        @include mediaQ($tablet-width){
+            display: flex;
+            flex-direction: row-reverse;
+            border-top: 1px solid $divider;
+            padding-top: 2rem;
+        }
+    }
+
+    &-input {
+        background-color: $form-input;
+        width: 100%;
+        border: 1px solid $divider;
+        border-radius: 4px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 4px;
+
+        &__container {
+            width: 100%;
+        }
+    }
+    
+
+    &-input__description {
+        height: 8.9375rem;
+        min-width: 100%;
+
+        &:focus{
+            outline: none !important;
+            border:2px solid $Brainflix-blue;
+        }
+
+        @include mediaQ($tablet-width){
+            height: 5.875rem;
+        }
+
+        @include mediaQ($desktop-width){
+            max-width: 42rem;
+        }
+    }
+
+    &-form__btn {
+        height: 3rem;
+        @include header-3;
+        margin-bottom: 0.5rem;
+
+        @include mediaQ($tablet-width){
+            max-width: 10rem;
+            margin-left: 3rem;
+        }
+    }
+}

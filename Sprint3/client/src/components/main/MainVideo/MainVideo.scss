@@ -1,0 +1,42 @@
+@import '../../../partials/Variables.scss';
+@import '../../../partials/Mixins.scss';
+@import '../../../partials/Global.scss';
+
+.main-video {
+    width: 100%;
+    max-width: 700px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    @include mediaQ($tablet-width){
+        height: 51.3vw;
+        max-width: 944px;
+        max-height: 531px;
+    }
+
+    @include mediaQ($desktop-width){
+        max-width: 944px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        background-color: $primary-bckgrnd;
+        align-items: flex-end;
+
+        @include mediaQ($tablet-width){
+            max-height: 531px;
+        }
+    }
+    
+    &-controls__container {
+        position: absolute;
+        padding: 0 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0.5rem;
+    }
+}
+
