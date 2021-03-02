@@ -19,7 +19,6 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
-
         <Switch>
           <Route path="/" exact component={Main} />
           <Route path="/Upload" component={VideoUploadPage} />
